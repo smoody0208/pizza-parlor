@@ -28,3 +28,7 @@ a.button {
 .form-group{
   color: white;
 }
+
+.new-contact{
+  display: none;
+}

@@ -29,6 +29,7 @@ Pizza.prototype.pizzaPrice = function() {
   return this.price
   
 }
+
 var pizza = new Pizza ("standard", "large")
 var price = pizza.pizzaPrice();
 console.log ("pizza", pizza);
