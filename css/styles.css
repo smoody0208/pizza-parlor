@@ -20,3 +20,11 @@ a.button {
   padding-bottom: 25%;
   background-color: rgba(250, 235, 215, 0.274);
       }
+
+.results {
+  color: white;
+}    
+
+.form-group{
+  color: white;
+}

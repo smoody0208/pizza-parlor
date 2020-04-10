@@ -11,7 +11,7 @@ Pizza.prototype.pizzaPrice = function() {
   if (this.pizzaPremium.length === 0){
     this.price;
   } else {
-    this.price += (this.pizzaPremium.length * .25);
+    this.price += (this.pizzaPremium.length * 1);
   }
 
   if (this.pizzaStandard.length === 0){
@@ -40,10 +40,18 @@ $(document).ready(function(){
     event.preventDefault();      
     var pizzaSize = $("input:radio[name=size]:checked").val();
     var newPizza = new Pizza(pizzaSize);
+    $("input[name='premium']:checked").each(function() {
+      newPizza.pizzaPremium.push($(this).val());
+    });
+    $("input[name='standard']:checked").each(function() {
+      newPizza.pizzaStandard.push($(this).val());
+    });
+ 
+    var pizzaPrice = newPizza.pizzaPrice()
+    $("#priceOutput").text(pizzaPrice);
 
-    
-    
-    
+  })
+})
     
     
     
