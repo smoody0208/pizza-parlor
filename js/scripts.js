@@ -30,6 +30,16 @@ Pizza.prototype.pizzaPrice = function() {
   
 }
 
+function Contact(firstName, lastName, phoneNumber, address){
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.phoneNumber = phoneNumber;
+  this.address = address;
+}
+
+Contact.prototype.addressForm = function() {
+  if ()
+}
 var pizza = new Pizza ("standard", "large")
 var price = pizza.pizzaPrice();
 console.log ("pizza", pizza);
