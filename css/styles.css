@@ -35,6 +35,10 @@ a.button {
   padding-left: 10px;
  padding-right: 10px;
  padding-top: 10px;
- padding-bottom: 50%;
 }
 
+h2 {
+  color: rgba(2, 1, 1, 0.76);
+  font-family: fantasy;
+  
+}

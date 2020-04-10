@@ -65,7 +65,6 @@ $(document).ready(function(){
     var pizzaPrice = newPizza.pizzaPrice()
     $("#priceOutput").text(pizzaPrice);
     $(".results").show();
-  
 
 // Delivery form ------
     });

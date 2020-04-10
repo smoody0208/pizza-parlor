@@ -5,7 +5,7 @@
 #### By _**{Spencer Moody}**_
 
 ## Description
-#### 
+#### Webpage for a pizza parlor where a user can select toppings/size and get a price in return.
 
 
 ### Specs
@@ -19,9 +19,10 @@
 ## Setup/Installation Requirements
 * Clone this Repository
 * Open in browser
+* Or visit: https://smoody0208.github.io/pizza-parlor/
 
 ## Known Bugs 
-#### There are no known bugs at the time.
+* Address form is not working yet.
 
 ## Support and Contact Details
 * spencer.moody@outlook.com
