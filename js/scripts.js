@@ -22,3 +22,21 @@ Pizza.prototype.pizzaPrice = function() {
   return this.price
   
 }
+var pizza = new Pizza ("standard", "large")
+var price = pizza.pizzaPrice();
+console.log ("pizza", pizza);
+console.log ("price", price);
+
+// User Interface ------
+$(document).ready(function(){
+  $("form").submit(function(event){
+    event.preventDefault();
+    var pizzaSize = $("input:radio[name=size]:checked").val();
+    var pizzaTopping = $("input[name='toppings']:checked").val();
+    
+    var pizza = new Pizza(pizzaTopping, pizzaSize);
+    pizza.pizzaPrice();
+
+    $("#priceOutput").html(pizza.price);
+    })
+  })
