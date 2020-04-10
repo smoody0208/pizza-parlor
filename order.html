@@ -11,121 +11,106 @@
   <title>Pizza Parlor</title>
 </head>
 <body>
-  <form class="form-group">
-    <div class="col-md-6">
-      <h2>Pick up or Delivery?</h2>
-        <p>Please pick one:</p>
-        <input type="radio" name="bn" value="0" /> No
-<input type="radio" name="bn" value="1" /> Yes
-<input type="radio" name="bn" value="2" checked="checked" /> Multiple
-
-<div id="onebn">One button</div>
-<div id="multibn">Multiple buttons</div>
-      <!--<div class="radio"> 
-        <label>     
-          <input type="radio" name="order" value="0" checked>Pickup<br>
-        </label>  
-      </div>  
-      <div class="radio"> 
-        <label>     
-          <input type="radio" name="order" value="1">Delivery<br>
-        </label>    
-      <div class="col-md-6">
-        <div id="new-contact">
-          <div class ="form-group">
-            <label for="new-first-name">First Name</label>
-            <input type="text"  class="form-control" id="new-first-name">
-          <div class="form-group">
-            <label for="new-last-name">Last Name</label>
-            <input type="text"  class="form-control" id="new-last-name">
-          </div>
-          <div class="form-group">
-            <label for="new-phone-number">Phone Number</label>
-            <input type="text"  class="form-control" id="new-phone-number">
-          </div>
-          <div class="form-group">
-            <label for="new-home-address">Home Address</label>
-            <input type="text"  class="form-control" id="new-email">
-          </div>    
+  <form class="form-group" id="pizzaOrder">
+    <h2>Pick up or Delivery?</h2>
+      <p>Please pick one:</p>
+      <input type="radio" name="bn" value="1" /> Delivery
+      <input type="radio" name="bn" value="2" checked="checked" /> Pickup
+    
+      <div id="multibn">
+        <div class ="form-group">
+          <label for="new-first-name">First Name</label>
+          <input type="text"  class="form-control" id="new-first-name">
         </div>  
-    </div> -->
+        <div class="form-group">
+          <label for="new-last-name">Last Name</label>
+          <input type="text"  class="form-control" id="new-last-name">
+        </div>
+        <div class="form-group">
+          <label for="new-phone-number">Phone Number</label>
+          <input type="text"  class="form-control" id="new-phone-number">
+        </div>
+        <div class="form-group">
+          <label for="new-home-address">Home Address</label>
+          <input type="text"  class="form-control" id="new-home-address">
+        </div>    
+      </div>
+    </div>  
 
-  
-    <h2>Pizza Size</h2>
-    <p >Pick the size of pizza you want:</p>
-    <div class="radio"> 
-      <label>     
-        <input type="radio" name="size" value="small" checked> Small: bout 10"<br>
-      </label>  
-    </div>  
-    <div class="radio"> 
-      <label>     
-        <input type="radio" name="size" value="medium"> Medium: right around 12"<br>
-      </label>  
-    </div>   
-    <div class="radio"> 
-      <label>     
-        <input type="radio" name="size" value="large"> Large: a littler larger than our medium.<br>
-      </label>  
+  <h2>Pizza Size</h2>
+  <p >Pick the size of pizza you want:</p>
+  <div class="radio"> 
+    <label>     
+      <input type="radio" name="size" value="small" checked> Small: bout 10"<br>
+    </label>  
+  </div>  
+  <div class="radio"> 
+    <label>     
+      <input type="radio" name="size" value="medium"> Medium: right around 12"<br>
+    </label>  
+  </div>   
+  <div class="radio"> 
+    <label>     
+      <input type="radio" name="size" value="large"> Large: a littler larger than our medium.<br>
+    </label>  
+  </div> 
+  <h2>Pizza Toppings</h2>
+  <p>Personalize your pizza! Pick any and all toppings.</p>     
+  <div class="row">
+    <div class="col-sm-3">
+      <input type="checkbox" name="premium" value="premium">
+      <label for="toppings-xcheese">Extra Cheese</label>
+    </div>
+    <div class="col-sm-3">
+      <input type="checkbox" name="premium" value="premium">
+      <label for="toppings-pepperoni">Pepperoni</label>
+    </div>
+    <div class="col-sm-3">
+      <input type="checkbox" name="premium" value="premium">
+      <label for="toppings-sausage">Sausage</label>
+    </div>
+    <div class="col-sm-3">
+      <input type="checkbox" name="premium" value="premium">
+      <label for="toppings-canadian-bacon">Canadian Bacon</label>
+    </div>
+    <div class="col-sm-3">
+      <input type="checkbox" name="premium" value="premium">
+      <label for="toppings-american-bacon">American Bacon</label>
+    </div>
+    <div class="col-sm-3">
+      <input type="checkbox" name="premium" value="premium">
+      <label for="toppings-chicken">Chicken</label>
+    </div>
+    <div class="col-sm-3">
+      <input type="checkbox" name="standard" value="standard">
+      <label for="toppings-artichokes">Artichokes</label>
+    </div>
+    <div class="col-sm-3">
+      <input type="checkbox" name="standard" value="standard">
+      <label for="toppings-mushrooms">Mushrooms</label>
+    </div>
+    <div class="col-sm-3">
+      <input type="checkbox" name="standard" value="standard">
+      <label for="toppings-onions">Onions</label>
+    </div>
+    <div class="col-sm-3">
+      <input type="checkbox" name="standard" value="standard">
+      <label for="toppings-olives">Olives</label>
+    </div>
+    <div class="col-sm-3">
+      <input type="checkbox" name="standard" value="standard">
+      <label for="toppings-green-peppers">Green Peppers</label>
+    </div>
+    <div class="col-sm-3">
+      <input type="checkbox" name="standard" value="standard">
+      <label for="toppings-pineapple">Pineapple</label>
+    </div>
+    <button type="submit" class="btn btn-info">Place Your Order</button>
+    <div class ="results">
+      <div class="head2"><h2>Thank You for Your Order!</h2></div>
+        <h4><span id="showTime"></span></h4>
+        <h4>Your order total is $<span id="priceOutput"></span></h4>
     </div> 
-    <h2>Pizza Toppings</h2>
-    <p>Personalize your pizza! Pick any and all toppings.</p>     
-    <div class="row">
-      <div class="col-sm-3">
-        <input type="checkbox" name="premium" value="premium">
-        <label for="toppings-xcheese">Extra Cheese</label>
-      </div>
-      <div class="col-sm-3">
-        <input type="checkbox" name="premium" value="premium">
-        <label for="toppings-pepperoni">Pepperoni</label>
-      </div>
-      <div class="col-sm-3">
-        <input type="checkbox" name="premium" value="premium">
-        <label for="toppings-sausage">Sausage</label>
-      </div>
-      <div class="col-sm-3">
-        <input type="checkbox" name="premium" value="premium">
-        <label for="toppings-canadian-bacon">Canadian Bacon</label>
-      </div>
-      <div class="col-sm-3">
-        <input type="checkbox" name="premium" value="premium">
-        <label for="toppings-american-bacon">American Bacon</label>
-      </div>
-      <div class="col-sm-3">
-        <input type="checkbox" name="premium" value="premium">
-        <label for="toppings-chicken">Chicken</label>
-      </div>
-      <div class="col-sm-3">
-        <input type="checkbox" name="standard" value="standard">
-        <label for="toppings-artichokes">Artichokes</label>
-      </div>
-      <div class="col-sm-3">
-        <input type="checkbox" name="standard" value="standard">
-        <label for="toppings-mushrooms">Mushrooms</label>
-      </div>
-      <div class="col-sm-3">
-        <input type="checkbox" name="standard" value="standard">
-        <label for="toppings-onions">Onions</label>
-      </div>
-      <div class="col-sm-3">
-        <input type="checkbox" name="standard" value="standard">
-        <label for="toppings-olives">Olives</label>
-      </div>
-      <div class="col-sm-3">
-        <input type="checkbox" name="standard" value="standard">
-        <label for="toppings-green-peppers">Green Peppers</label>
-      </div>
-      <div class="col-sm-3">
-        <input type="checkbox" name="standard" value="standard">
-        <label for="toppings-pineapple">Pineapple</label>
-      </div>
-      <button type="submit" class="btn btn-info">Place Your Order</button>
-      <div class ="results">
-        <div class="head2"><h2>Thank You for Your Order!</h2></div>
-          <h4><span id="showTime"></span></h4>
-          <h4>Your order total is $<span id="priceOutput"></span></h4>
-      </div>
-    </div>  
-  </form>
+  </form> 
 </body>
 </html>

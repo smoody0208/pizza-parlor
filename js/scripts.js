@@ -4,8 +4,9 @@ function Pizza(pizzaSize) {
   this.pizzaPremium = [];
   this.pizzaStandard = [];
   this.pizzaSize = pizzaSize;
-}
 
+// Calculate Pizza Price ------  
+}
 Pizza.prototype.pizzaPrice = function() {
   this.price = 10;
   if (this.pizzaPremium.length === 0){
@@ -13,7 +14,6 @@ Pizza.prototype.pizzaPrice = function() {
   } else {
     this.price += (this.pizzaPremium.length * 1);
   }
-
   if (this.pizzaStandard.length === 0){
     this.price;
   } else {
@@ -27,9 +27,8 @@ Pizza.prototype.pizzaPrice = function() {
     this.price += 4;
   }
   return this.price
-  
 }
-
+// Back End for Delivery Form
 function Contact(delivery, firstName, lastName, phoneNumber, address){
   this.delivery = delivery;
   this.firstName = firstName;
@@ -37,17 +36,14 @@ function Contact(delivery, firstName, lastName, phoneNumber, address){
   this.phoneNumber = phoneNumber;
   this.address = address;
 }
-
 Contact.prototype.addressForm = function() {
   if (this.delivery === "delivery"){
     $(".new-contact").show();
   }
 }
-
 Contact.prototype.fullname = function(){
   return this.firstName + " " + this.lastName;
 }
-
 
 var pizza = new Pizza ("standard", "large")
 var price = pizza.pizzaPrice();
@@ -56,23 +52,6 @@ console.log ("price", price);
 
 // User Interface ------
 $(document).ready(function(){
-  $("input[name$='bn']").click(function(){
-    var radio_value = $(this).val();
-    if(radio_value=='0') {
-      $("#onebn").hide("slow");
-      $("#multibn").hide("slow");
-    }
-    else if(radio_value=='1') {
-      $("#onebn").show("slow");
-      $("#multibn").hide("slow");
-    }
-    else if(radio_value=='2') {
-      $("#multibn").show("slow");
-      $("#onebn").hide("slow");
-     }
-    });
-    $('[name="bn"]:checked').trigger('click');
-  });
   $("form").submit(function(event){
     event.preventDefault(); 
     var pizzaSize = $("input:radio[name=size]:checked").val();
@@ -80,13 +59,24 @@ $(document).ready(function(){
     $("input[name='premium']:checked").each(function() {
       newPizza.pizzaPremium.push($(this).val());
     })
-
     $("input[name='standard']:checked").each(function() {
       newPizza.pizzaStandard.push($(this).val());
     });
     var pizzaPrice = newPizza.pizzaPrice()
     $("#priceOutput").text(pizzaPrice);
+    $(".results").show();
+  
 
-
+// Delivery form ------
     });
- 
+    $("input[name$='bn']").click(function(event){
+      var radio_value = $(this).val();
+      if(radio_value=='1') {
+        $("#multibn").show("slow");
+      }
+      else if(radio_value=='2') {
+        $("#multibn").hide("slow");
+      }
+      })
+      $('[name="bn"]:checked').trigger('click');
+    });

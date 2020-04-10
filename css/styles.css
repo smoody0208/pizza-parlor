@@ -23,8 +23,18 @@ a.button {
 
 .results {
   color: white;
+  padding-left: 10px;
+  display: none;
+
 }    
 
 .form-group{
   color: white;
+  background-color: rgba(41, 55, 80, 0.438);
+  text-align: auto;
+  padding-left: 10px;
+ padding-right: 10px;
+ padding-top: 10px;
+ padding-bottom: 50%;
 }
+
