@@ -30,7 +30,8 @@ Pizza.prototype.pizzaPrice = function() {
   
 }
 
-function Contact(firstName, lastName, phoneNumber, address){
+function Contact(delivery, firstName, lastName, phoneNumber, address){
+  this.delivery = delivery;
   this.firstName = firstName;
   this.lastName = lastName;
   this.phoneNumber = phoneNumber;
@@ -38,8 +39,16 @@ function Contact(firstName, lastName, phoneNumber, address){
 }
 
 Contact.prototype.addressForm = function() {
-  if ()
+  if (this.delivery === "delivery"){
+    $(".new-contact").show();
+  }
 }
+
+Contact.prototype.fullname = function(){
+  return this.firstName + " " + this.lastName;
+}
+
+
 var pizza = new Pizza ("standard", "large")
 var price = pizza.pizzaPrice();
 console.log ("pizza", pizza);
@@ -53,28 +62,23 @@ $(document).ready(function(){
     var newPizza = new Pizza(pizzaSize);
     $("input[name='premium']:checked").each(function() {
       newPizza.pizzaPremium.push($(this).val());
-    });
+    })
+
     $("input[name='standard']:checked").each(function() {
       newPizza.pizzaStandard.push($(this).val());
     });
- 
     var pizzaPrice = newPizza.pizzaPrice()
     $("#priceOutput").text(pizzaPrice);
 
+    $("input[name$='order']").click(function(){
+      var radio_value = $(this).val();
+      if(radio_value=='0') {
+        $("#new-contact").hide("slow");
+      } 
+      else if(radio_value==='1') { 
+      ("#new-contact").show("slow");
+      }
   })
+    $('[name="bn"]:checked').trigger('click');
 })
-    
-    
-    
-    /*$(".option").click(function(event) {
-        var total = 0;
-        $(".option:checked").each(function() {
-            total += parseInt($(this).val());
-        });
-        
-        if (total == 0) {
-            $('#amount').val('');
-        } else {                
-            $('#amount').val(total);
-        }
-    })*/
+})
