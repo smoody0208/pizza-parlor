@@ -1,0 +1,24 @@
+body { 
+  background: url(https://images.pexels.com/photos/1596888/pexels-photo-1596888.jpeg?cs=srgb&dl=pizza-neon-light-signage-1596888.jpg&fm=jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  text-decoration: none;
+  color: initial;
+}
+
+#index {
+  padding-top: 25%;
+  padding-bottom: 25%;
+  background-color: rgba(250, 235, 215, 0.274);
+      }
+
+}
