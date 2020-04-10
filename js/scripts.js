@@ -56,8 +56,25 @@ console.log ("price", price);
 
 // User Interface ------
 $(document).ready(function(){
+  $("input[name$='bn']").click(function(){
+    var radio_value = $(this).val();
+    if(radio_value=='0') {
+      $("#onebn").hide("slow");
+      $("#multibn").hide("slow");
+    }
+    else if(radio_value=='1') {
+      $("#onebn").show("slow");
+      $("#multibn").hide("slow");
+    }
+    else if(radio_value=='2') {
+      $("#multibn").show("slow");
+      $("#onebn").hide("slow");
+     }
+    });
+    $('[name="bn"]:checked').trigger('click');
+  });
   $("form").submit(function(event){
-    event.preventDefault();      
+    event.preventDefault(); 
     var pizzaSize = $("input:radio[name=size]:checked").val();
     var newPizza = new Pizza(pizzaSize);
     $("input[name='premium']:checked").each(function() {
@@ -70,15 +87,6 @@ $(document).ready(function(){
     var pizzaPrice = newPizza.pizzaPrice()
     $("#priceOutput").text(pizzaPrice);
 
-    $("input[name$='order']").click(function(){
-      var radio_value = $(this).val();
-      if(radio_value=='0') {
-        $("#new-contact").hide("slow");
-      } 
-      else if(radio_value==='1') { 
-      ("#new-contact").show("slow");
-      }
-  })
-    $('[name="bn"]:checked').trigger('click');
-})
-})
+
+    });
+ 
