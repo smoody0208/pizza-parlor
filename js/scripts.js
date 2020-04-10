@@ -20,4 +20,5 @@ Pizza.prototype.pizzaPrice = function() {
     this.price += 4;
   }
   return this.price
+  
 }
